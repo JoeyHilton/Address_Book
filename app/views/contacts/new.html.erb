@@ -1,2 +1,27 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+<%= form_for @contact do |f| %>
+
+    <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+    </div>
+   
+    <div class="field">
+    <%= f.label email %><br />
+    <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  
+    </div>
+
+  <div class="actions">
+    <%= f.submit "Submit new contact" %>
+  </div>
+<% end %>
+
+
+<div class="field">
+<%= render  %>
+</div>
